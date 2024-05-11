@@ -7,13 +7,13 @@ public class Universidad {
 	private int id;
 	private String nombre;
 	private String localidad;
-	private List<String> carrera;
+	private List<String> carreras;
 	
-	public Universidad(int id, String nombre, String localidad, List<String> carrera) {
+	public Universidad(int id, String nombre, String localidad, List<String> carreras) {
 		this.id = id;
 		this.nombre = nombre;
 		this.localidad = localidad;
-		this.carrera = carrera;
+		this.carreras = carreras;
 	}
 	
 	public int getId() {
@@ -34,11 +34,11 @@ public class Universidad {
 	public void setLocalidad(String localidad) {
 		this.localidad = localidad;
 	}
-	public List<String> getCarrera() {
-		return carrera;
+	public List<String> getcarreras() {
+		return carreras;
 	}
-	public void setCarrera(List<String> carrera) {
-		this.carrera = carrera;
+	public void setcarreras(List<String> carreras) {
+		this.carreras = carreras;
 	}
 	
 	

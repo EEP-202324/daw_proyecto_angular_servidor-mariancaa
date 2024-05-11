@@ -7,7 +7,7 @@ import { Universidad } from './dto/universidad';
 })
 export class UniversidadRestService {
 
-  url = "http://localhost:8080/universidad"; //direccion de solicitudes 
+  url = "http://localhost:8080/universidad"; //direccion de solicitudes
   constructor(private http: HttpClient) { }
 
 
@@ -15,7 +15,7 @@ export class UniversidadRestService {
     return this.http.get<Universidad[]>(this.url);
   }
 
-  crearUniversidad() {
-    return this.http.post(this.url, {});
+  crearUniversidad(universidad : Universidad) {
+    return this.http.post(this.url, universidad);
   }
 }

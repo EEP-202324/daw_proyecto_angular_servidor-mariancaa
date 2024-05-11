@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UniversidadRestService } from '../universidad-rest.service';
+import { Universidad } from '../dto/universidad';
 
 @Component({
   selector: 'app-formulario',
@@ -19,15 +20,15 @@ export class FormularioComponent {
 
 
   crearUniversidad() {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
-    // Aquí puedes realizar las acciones necesarias cuando se envíe el formulario
-    console.log('Nombre Universidad:', this.formData.nombre);
-    console.log('Localidad:', this.formData.localidad);
-    console.log('Carrera1:', this.formData.carrera1);
-    console.log('Carrera2:', this.formData.carrera2);
-      console.log('Carrera3:', this.formData.carrera3);
+    const uni: Universidad = {
+      id: -1,
+      nombre: this.formData.nombre,
+      localidad: this.formData.localidad,
+      carreras : [this.formData.carrera1, this.formData.carrera2, this.formData.carrera3]
+
+    };
     // Por ejemplo, puedes enviar los datos del formulario a través de un servicio
-        this.restService.crearUniversidad().subscribe(
+        this.restService.crearUniversidad(uni).subscribe(
       respuesta => {
         console.log(respuesta);
       }

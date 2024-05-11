@@ -15,9 +15,14 @@ public class UniversidadMapper implements RowMapper<Universidad>{
 	private ObjectMapper om = new ObjectMapper();
 	@Override
 	public Universidad mapRow(ResultSet rs, int rowNum) throws SQLException {
-		//om.readValue(rs.getString("carreras"), ArrayList.class);
-		return new Universidad(rs.getInt("id"), rs.getString("nombre"), rs.getString("localidad"),
-				new ArrayList<>());
+		try {
+			return new Universidad(rs.getInt("id"), rs.getString("nombre"), rs.getString("localidad"),
+					rs.getString("carreras") == null
+					? new ArrayList<String>() : om.readValue(rs.getString("carreras"), ArrayList.class));
+		}catch(Exception e) {
+			return null;
+		}
+
 	}
 
 }

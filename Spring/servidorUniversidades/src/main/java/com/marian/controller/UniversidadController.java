@@ -29,7 +29,7 @@ public class UniversidadController {
 	}
 	
 	@PostMapping("/universidad")
-	public ResponseEntity createUniversidad(@RequestBody final Universidad universidad){
+	public ResponseEntity createUniversidad(@RequestBody final Universidad universidad) throws Exception{
 		if(universidad != null && universidad.getNombre() != null && universidad.getLocalidad() != null) {
 			universidadRepositorio.createUniversidad(universidad);
 			return new ResponseEntity<>(HttpStatus.CREATED);
