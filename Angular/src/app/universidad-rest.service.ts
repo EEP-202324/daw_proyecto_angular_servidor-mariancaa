@@ -12,6 +12,8 @@ export class UniversidadRestService {
 
 
   listUniversidades() {
-    return this.http.get<Universidad[]>(this.url);
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.get<Universidad[]>(this.url, headers);
   }
 }

@@ -5,8 +5,6 @@ import { Universidad } from '../dto/universidad';
 
 @Component({
   selector: 'app-cuerpo',
-  standalone: true,
-  imports: [CommonModule],
   template: `
   <main>
   <div *ngFor="let universidad of listaUniversidades">
