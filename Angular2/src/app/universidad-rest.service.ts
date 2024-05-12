@@ -18,4 +18,8 @@ export class UniversidadRestService {
   crearUniversidad(universidad : Universidad) {
     return this.http.post(this.url, universidad);
   }
+
+  borrarUniversidad(id : number) {
+    return this.http.delete(this.url + "/" + id);
+  }
 }

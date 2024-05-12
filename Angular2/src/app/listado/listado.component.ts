@@ -28,4 +28,12 @@ export class ListadoComponent {
         }
     );
   }
+
+  borrarUniversidad(id : number) {
+    this.restService.borrarUniversidad(id).subscribe(
+      resp => {
+        window.location.reload();
+      }
+    );
+  }
 }
