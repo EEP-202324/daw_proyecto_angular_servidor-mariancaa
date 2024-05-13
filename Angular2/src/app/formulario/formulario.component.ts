@@ -34,5 +34,20 @@ export class FormularioComponent {
       }
     );
   }
+  modificarUniversidad() {
+        const uni: Universidad = {
+      id: -1,
+      nombre: this.formData.nombre,
+      localidad: this.formData.localidad,
+      carreras : [this.formData.carrera1, this.formData.carrera2, this.formData.carrera3]
+
+    };
+    // Por ejemplo, puedes enviar los datos del formulario a través de un servicio
+        this.restService.modificarUniversidad(uni).subscribe(
+      respuesta => {
+        console.log(respuesta);
+      }
+    );
+  }
 
 }

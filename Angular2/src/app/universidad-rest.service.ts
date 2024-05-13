@@ -22,4 +22,7 @@ export class UniversidadRestService {
   borrarUniversidad(id : number) {
     return this.http.delete(this.url + "/" + id);
   }
+  modificarUniversidad(universidad : Universidad) {
+    return this.http.put(this.url, universidad);
+  }
 }

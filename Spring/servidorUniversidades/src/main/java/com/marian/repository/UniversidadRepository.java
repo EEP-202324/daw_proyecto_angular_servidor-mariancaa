@@ -27,6 +27,12 @@ public class UniversidadRepository {
 				universidad.getNombre(), universidad.getLocalidad(), om.writeValueAsString(universidad.getcarreras()));
 		return filasAfectadas == 1;
 	}
+	
+	public boolean modificarUniversidadPorNombre(final Universidad universidad) throws Exception {
+		int filasAfectadas = jdbc.update("UPDATE universidades SET localidad = ?, carreras = ? WHERE nombre = ?",
+				universidad.getLocalidad(), om.writeValueAsString(universidad.getcarreras()), universidad.getNombre());
+		return filasAfectadas == 1;
+	}
 
 	public boolean deleteUniversidad(final int id){
 		int filasAfectadas = jdbc.update("DELETE FROM universidades WHERE id = ?", id);

@@ -3,6 +3,7 @@ package com.marian.mappers;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
 
@@ -16,9 +17,13 @@ public class UniversidadMapper implements RowMapper<Universidad>{
 	@Override
 	public Universidad mapRow(ResultSet rs, int rowNum) throws SQLException {
 		try {
+			List<String> carreras = new ArrayList<>();
+			if(rs.getString("carreras") != null) {
+				String carrerasStr = rs.getString("carreras");
+				carreras = om.readValue(carrerasStr, ArrayList.class);
+			}
 			return new Universidad(rs.getInt("id"), rs.getString("nombre"), rs.getString("localidad"),
-					rs.getString("carreras") == null
-					? new ArrayList<String>() : om.readValue(rs.getString("carreras"), ArrayList.class));
+					carreras);
 		}catch(Exception e) {
 			return null;
 		}
