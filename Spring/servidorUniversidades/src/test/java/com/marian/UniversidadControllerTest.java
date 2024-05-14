@@ -83,7 +83,20 @@ public class UniversidadControllerTest {
 		when(repo.deleteUniversidad(0)).thenReturn(false);
 		Assertions.assertEquals(HttpStatus.NOT_FOUND, controller.deleteUniversidad(0).getStatusCode());
 	}
-
+	
+	@Test
+	public void verboPut1() throws Exception {
+		final Universidad u = new Universidad(0, "","",List.of("","",""));
+		when(repo.modificarUniversidadPorNombre(u)).thenReturn(false);
+		Assertions.assertEquals(HttpStatus.NOT_FOUND, controller.modificarUniversidad(u).getStatusCode());
+	}
+	
+	@Test
+	public void verboPut2() throws Exception {
+		final Universidad u = new Universidad(0, "","",List.of("","",""));
+		when(repo.modificarUniversidadPorNombre(u)).thenReturn(true);
+		Assertions.assertEquals(HttpStatus.OK, controller.modificarUniversidad(u).getStatusCode());
+	}
 	
 	
 }

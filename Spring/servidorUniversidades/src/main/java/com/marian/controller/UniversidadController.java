@@ -51,4 +51,14 @@ public class UniversidadController {
 		
 	}
 	
+	@PutMapping("/universidad")
+	public ResponseEntity modificarUniversidad(@RequestBody final Universidad universidad) throws Exception {
+		boolean universidadModificada = universidadRepositorio.modificarUniversidadPorNombre(universidad);
+		if(universidadModificada) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
+	
 }
