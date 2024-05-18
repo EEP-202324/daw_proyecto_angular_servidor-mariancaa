@@ -47,7 +47,9 @@ export class FormularioComponent {
     // Por ejemplo, puedes enviar los datos del formulario a través de un servicio
         this.restService.modificarUniversidad(uni).subscribe(
       respuesta => {
-        console.log(respuesta);
+            console.log(respuesta);
+              alert("TU universidad ha sido modificada");
+            window.location.reload();
       }
     );
   }
