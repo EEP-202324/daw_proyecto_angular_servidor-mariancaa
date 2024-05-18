@@ -1,0 +1,28 @@
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4b0082;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6a0dad;
+}

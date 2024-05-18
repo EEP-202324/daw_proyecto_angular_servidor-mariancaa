@@ -5,11 +5,9 @@
 
 .form-group {
   margin-bottom: 20px;
+  font-family: 'Montserrat';
 }
 
-h4 {
-  margin-top: 0;
-}
 
 input[type="text"] {
   width: 100%;
@@ -20,15 +18,18 @@ input[type="text"] {
   margin-top: 5px;
 }
 
-button {
+button.form-btn {
   background-color: #4b0082;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   padding: 10px 20px;
+  margin: 0 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
 }
 
-button:hover {
+button.form-btn:hover {
   background-color: #6a0dad;
 }
