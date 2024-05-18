@@ -26,3 +26,14 @@ button {
 button:hover {
   background-color: #6a0dad;
 }
+.contenedor {
+  display: grid;
+  grid-gap: 20px;
+  height: 700px;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 300px);
+  justify-content: center;
+  align-content: space-between;
+  /*	Valores start end center space-between space-evenly space-around*/
+
+}

@@ -1,11 +1,14 @@
 <h2>Mis universidades</h2>
-<ul>
-  <div *ngFor="let universidad of listaUniversidades">
+<div class="contenedor">
+  <div *ngFor="let universidad of listaUniversidades" style="height:100px;width:400px">
     <h2>{{universidad.nombre}}</h2>
     <ul>
-      <li>Localidad: {{universidad.localidad}}</li>
-      <li>Carreras: {{universidad.carreras}}</li>
+      <li><b>Localidad:</b></li>
+      <li> {{universidad.localidad}}</li>
+      <li><b>Carreras:</b></li>
+      <li *ngFor="let carrera of universidad.carreras"> {{carrera}}</li>
     </ul>
-    <button type="button" (click)="borrarUniversidad(universidad.id)">Borrar</button>
+    <button type="button" (click)="borrarUniversidad(universidad.id)"><b>Borrar</b></button>
   </div>
-</ul>
+</div>
+
