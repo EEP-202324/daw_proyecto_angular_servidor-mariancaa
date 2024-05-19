@@ -9,8 +9,8 @@ El objetivo de la aplicación es que el usuario pueda registrar universidades, m
 - Botón de eliminación de un elemento
 
 #### Spring:
--API REST : Put, Get, Post, Delete
--Test Unitarios
+- API REST : Put, Get, Post, Delete
+- Test Unitarios
 
 #### Video explicativo de la app y código
 https://eepmad-my.sharepoint.com/:v:/g/personal/mariam-casado1_eep-igroup_com1/EW3s4jFQ0Z1BpP6xyFdEkyMBZ0S0tClseX2POYWnC-PcGg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=tRSNUU
